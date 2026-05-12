@@ -1,76 +1,541 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Academic Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device=width, initial-sale=1.0"/>
+  <title>Rebeca Urizar - About Me</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rebeca U. | Developmental Psychology Graduate Student</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Georgia;
-      margin: 0;
-      background: #876C7A;
-      color: #486F75;
+
+    :root {
+      --navy: #203554;
+      --rose: #9a7084;
+      --teal: #4e7c80;
+      --light: #f7f3f1;
+      --text: #333;
+      --white: #ffffff;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* NAVBAR */
 
     header {
-      background: 876C7A;
-      padding: 80px 20px;
-      text-align: center;
+      background: linear-gradient(90deg, #203554, #1a2c4a);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
     }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .logo span {
+      color: #d5a8bc;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d5a8bc;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 5rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 9vw, 6rem);
+      color: var(--rose);
+      line-height: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .line {
+      width: 80px;
+      height: 4px;
+      background: var(--rose);
+      border-radius: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.9rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 500;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-rose {
+      background: var(--rose);
+      color: white;
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn-teal {
+      background: var(--teal);
+      color: white;
+    }
+
+    .btn-outline {
+      border: 2px solid var(--navy);
+      color: var(--navy);
+    }
+
+    .hero-image {
+      background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1200&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      border-radius: 30px;
+      min-height: 500px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    /* SECTIONS */
 
     section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 3rem;
+      color: var(--navy);
+    }
+
+    .divider {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, var(--rose), var(--teal));
+      margin: 1rem auto 0;
+      border-radius: 20px;
+    }
+
+    /* CARDS */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
     }
 
     .card {
-      background: 486F75;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 12px;
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: 0.3s;
+      border-bottom: 5px solid transparent;
     }
 
-    a.button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background: #876C7A;
-      color: 3b4967;
-      text-decoration: none;
-      border-radius: 8px;
+    .card:hover {
+      transform: translateY(-8px);
     }
+
+    .card:nth-child(1) {
+      border-color: var(--rose);
+    }
+
+    .card:nth-child(2) {
+      border-color: var(--teal);
+    }
+
+    .card:nth-child(3) {
+      border-color: var(--navy);
+    }
+
+    .card:nth-child(4) {
+      border-color: var(--rose);
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    /* PUBLICATIONS */
+
+    .publication {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .publication h3 {
+      color: var(--navy);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .journal {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 0.8rem;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: linear-gradient(120deg, #4d7b80, #203554);
+      color: white;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 0.8rem;
+    }
+
+    .contact .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .contact .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    footer {
+      background: #162844;
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .line {
+        margin-inline: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Rebeca Urizar</h1>
-  <p>Developmental Psychology Graduate Student</p>
-  <p> I study children's selective trust, specifically I am interested in how they evaluate information from technological informants and people in the personal-social information context acorss developmental stages.</p>
 
-  <a class="button" href="https://orcid.org/0009-0003-1952-4293">ORCID</a>
-  <a class="button" href="https://ca.linkedin.com/in/rebeca-urizar-901a27329">LinkedIn</a>
+  <div class="container navbar">
+
+    <div class="logo">
+      <span>RU</span>
+      <div>|</div>
+      <div>Rebeca C. Urizar</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">RESEARCH</a></li>
+        <li><a href="#">PUBLICATIONS</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
 </header>
 
-<section>
-  <h2>Research Interests</h2>
-  <div class="card">
+<section class="hero container">
+
+  <div>
+
+    <h1>Rebeca C. Urizar</h1>
+
+    <div class="subtitle">
+      Developmental Psychology Graduate Student
+    </div>
+
+    <div class="line"></div>
+
     <p>
-      Developmental social cogntiion, children's selective trust, reasoning about personal and social advice, and judgments of technological informants.
+      I study children's selective trust, specifically I am interested in how they evaluate information from technological informants and people in the personal-social information context acorss developmental stages.
     </p>
+
+    <div class="buttons">
+
+      <a href="#" class="btn btn-rose">ORCID</a>
+
+      <a href="#" class="btn btn-teal">LinkedIn</a>
+
+      <a href="#" class="btn btn-navy">CV (PDF)</a>
+
+    </div>
+
   </div>
 
-  <h2>Contact</h2>
-  <div class="card">
-    <p>urizarr@myumanitoba.ca</p>
-  </div>
+  <div class="hero-image"></div>
+
 </section>
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Research Interests</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>Selective Trust in Childhood</h3>
+        <p>
+          Understanding how children evaluate and choose whom to trust
+          as a source of information.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🗣️</div>
+        <h3>Emerging Technologies</h3>
+        <p>
+          Exploring interactions how childrens use of AI ChatBots, digital voice assistants and other technologies 
+          influence their understanding of these sources as social agents across development.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h3>Collaborative Science</h3>
+        <p>
+          Passionate about Big Team Science and Open Science initiatives.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>Social Cognition</h3>
+        <p>
+          Examining social and cognitive processes that shape learning
+          and decision-making.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Selected Publications</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="publication">
+
+      <div>
+        <h3>Assessing the Availability and Components of Perinatal Mental Health Support Programs</h3>
+
+        <div class="journal">
+          Journal of Obstetrics and Gynaecology Canada (2025)
+        </div>
+
+        <p>
+          Despite the increasing prevalence of anxiety in the perinatal period, limited access to providers and mental health services continues to prevent affected persons from receiving necessary support. 
+          Peer support programs may provide timely, accessible support by connecting persons with others who share lived experiences. 
+          This study aimed to identify and examine perinatal peer support programs available in Canada, with particular focus on those addressing perinatal anxiety.
+        </p>
+      </div>
+
+      <a href="#" class="btn btn-rose">
+        View Publication
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact">
+
+  <div class="container contact-grid">
+
+    <div>
+      <h2>Contact</h2>
+
+      <p>
+        I am always interested in discussing research,
+        collaborations, and new opportunities.
+      </p>
+    </div>
+
+    <div class="contact-info">
+      <p>📧 urizarr@myuamnitoba.ca</p>
+      <p>📍 University of Manitoba, Department of Psychology</p>
+      <p>🔗 https://ca.linkedin.com/in/rebeca-urizar-901a27329</p>
+    </div>
+
+    <div>
+      <a href="mailto:urizarr@myumanitoba.ca"
+         class="btn btn-outline">
+        Get in Touch →
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  Rebeca Urizar | 2026 | urizarr.github.io/UrizarR
+</footer>
 
 </body>
 </html>
