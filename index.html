@@ -1,0 +1,242 @@
+export default function AcademicHomepage() {
+  const publications = [
+    {
+      title: "Children’s Trust in Digital Voice Assistants Across Information Contexts",
+      journal: "Developmental Psychology",
+      year: "2026",
+    },
+    {
+      title: "Selective Trust and Emerging Technology in Early Childhood",
+      journal: "Journal of Experimental Child Psychology",
+      year: "2025",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-neutral-50 text-neutral-900">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <div>
+            <h1 className="text-xl font-semibold">Rebeca U.</h1>
+          </div>
+
+          <div className="flex gap-6 text-sm font-medium">
+            <a href="#about" className="hover:text-neutral-500">
+              About
+            </a>
+            <a href="#research" className="hover:text-neutral-500">
+              Research
+            </a>
+            <a href="#publications" className="hover:text-neutral-500">
+              Publications
+            </a>
+            <a href="#contact" className="hover:text-neutral-500">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="mb-4 text-sm uppercase tracking-[0.2em] text-neutral-500">
+            Developmental Psychology Researcher
+          </p>
+
+          <h2 className="mb-6 text-5xl font-bold leading-tight">
+            Studying how children learn who — and what — to trust.
+          </h2>
+
+          <p className="mb-8 max-w-xl text-lg leading-8 text-neutral-600">
+            My research explores children’s selective trust in digital voice
+            assistants, testimony, and social information across different
+            informational contexts.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://orcid.org"
+              target="_blank"
+              className="rounded-2xl bg-neutral-900 px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
+            >
+              ORCID
+            </a>
+
+            <a
+              href="https://scholar.google.com"
+              target="_blank"
+              className="rounded-2xl border border-neutral-300 bg-white px-5 py-3 text-sm font-medium transition hover:bg-neutral-100"
+            >
+              Google Scholar
+            </a>
+
+            <a
+              href="/cv.pdf"
+              className="rounded-2xl border border-neutral-300 bg-white px-5 py-3 text-sm font-medium transition hover:bg-neutral-100"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <div className="flex justify-center md:justify-end">
+          <div className="h-[420px] w-[320px] overflow-hidden rounded-[2rem] border border-neutral-200 bg-white shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+              alt="Research profile"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section
+        id="about"
+        className="border-t border-neutral-200 bg-white"
+      >
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="mb-12 max-w-3xl">
+            <h3 className="mb-4 text-3xl font-bold">About</h3>
+            <p className="text-lg leading-8 text-neutral-600">
+              I am a researcher interested in cognitive development,
+              selective trust, and children’s interactions with emerging
+              technologies. My work examines how children evaluate competing
+              sources of information, particularly digital voice assistants
+              such as Alexa and Siri.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-6">
+              <h4 className="mb-3 text-lg font-semibold">Research Areas</h4>
+              <ul className="space-y-2 text-neutral-600">
+                <li>• Selective trust</li>
+                <li>• Testimony and learning</li>
+                <li>• Child-technology interaction</li>
+                <li>• Social cognition</li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-6">
+              <h4 className="mb-3 text-lg font-semibold">Current Projects</h4>
+              <ul className="space-y-2 text-neutral-600">
+                <li>• Trust in DVAs</li>
+                <li>• Personal-social information</li>
+                <li>• Informant reliability</li>
+                <li>• Preschool cognition</li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-6">
+              <h4 className="mb-3 text-lg font-semibold">Affiliations</h4>
+              <ul className="space-y-2 text-neutral-600">
+                <li>• Your University</li>
+                <li>• Developmental Lab</li>
+                <li>• Open Science Research</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research */}
+      <section id="research">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="mb-12 max-w-3xl">
+            <h3 className="mb-4 text-3xl font-bold">Research</h3>
+            <p className="text-lg leading-8 text-neutral-600">
+              My work investigates how children navigate conflicting sources of
+              information and how trust changes depending on informational
+              domains such as factual versus personal-social knowledge.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-neutral-200">
+              <h4 className="mb-4 text-2xl font-semibold">
+                Digital Voice Assistants
+              </h4>
+              <p className="leading-8 text-neutral-600">
+                Exploring how children evaluate Alexa, Siri, and other digital
+                assistants as informational sources.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-neutral-200">
+              <h4 className="mb-4 text-2xl font-semibold">
+                Selective Trust
+              </h4>
+              <p className="leading-8 text-neutral-600">
+                Examining the cues children use to determine who is reliable,
+                knowledgeable, and trustworthy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Publications */}
+      <section
+        id="publications"
+        className="border-t border-neutral-200 bg-white"
+      >
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="mb-12">
+            <h3 className="mb-4 text-3xl font-bold">Selected Publications</h3>
+            <p className="text-lg text-neutral-600">
+              A selection of recent research and ongoing work.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {publications.map((pub, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-neutral-200 bg-neutral-50 p-6"
+              >
+                <h4 className="mb-2 text-xl font-semibold">{pub.title}</h4>
+                <p className="text-neutral-600">
+                  {pub.journal} · {pub.year}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="rounded-[2rem] bg-neutral-900 p-10 text-white">
+            <h3 className="mb-4 text-3xl font-bold">Get in Touch</h3>
+
+            <p className="mb-8 max-w-2xl text-lg leading-8 text-neutral-300">
+              I am always interested in collaboration opportunities,
+              developmental psychology research, and open science initiatives.
+            </p>
+
+            <div className="flex flex-wrap gap-4 text-sm">
+              <a
+                href="mailto:your.email@university.edu"
+                className="rounded-2xl bg-white px-5 py-3 font-medium text-neutral-900"
+              >
+                Email
+              </a>
+
+              <a
+                href="https://orcid.org"
+                target="_blank"
+                className="rounded-2xl border border-white/20 px-5 py-3 font-medium"
+              >
+                ORCID Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
